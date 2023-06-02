@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '',
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: Center(
-          child: SlideshowWidget(),
+          child: SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+            child: SlideshowWidget(),
+          ),
         ),
       ),
     );
@@ -77,7 +82,10 @@ class SlideshowWidgetState extends State<SlideshowWidget> {
       startTimer();
     });
 
-    return Image.asset(currentImage.path);
+    return Image.asset(
+      currentImage.path,
+      fit: BoxFit.cover,
+    );
   }
 }
 
