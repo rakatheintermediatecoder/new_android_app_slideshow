@@ -41,9 +41,9 @@ class SlideshowWidget extends StatefulWidget {
 class SlideshowWidgetState extends State<SlideshowWidget> {
   int currentIndex = 0;
   List<SlideshowImage> images = [
-    SlideshowImage("assets/hd4.jpeg", const Duration(seconds: 5)),
-    SlideshowImage("assets/hd5.jpeg", const Duration(seconds: 3)),
-    SlideshowImage("assets/hd6.jpeg", const Duration(seconds: 8)),
+    SlideshowImage("assets/p2.jpeg", const Duration(seconds: 5)),
+    SlideshowImage("assets/p3.jpeg", const Duration(seconds: 3)),
+    SlideshowImage("assets/p4.jpeg", const Duration(seconds: 8)),
     // Add more images as needed
   ];
   late Timer timer;
@@ -84,7 +84,7 @@ class SlideshowWidgetState extends State<SlideshowWidget> {
 
     return Image.asset(
       currentImage.path,
-      fit: BoxFit.cover,
+      fit: BoxFit.fill,
     );
   }
 }
