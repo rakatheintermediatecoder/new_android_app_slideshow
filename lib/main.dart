@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
 
+import 'MyVideoPlayer.dart';
+
 void main() {
   runApp(const MyApp());
+}
+
+void videoPlayer() {
+  runApp(const MyVideoApp());
 }
 
 class MyApp extends StatelessWidget {
